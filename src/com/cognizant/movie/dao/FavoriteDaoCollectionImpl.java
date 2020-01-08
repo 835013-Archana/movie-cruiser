@@ -44,7 +44,7 @@ public class FavoriteDaoCollectionImpl implements FavoriteDao {
             userFavorite.put(userId, favorite);
         }
 
-    }
+    }                                            
 
     @Override
     public void removeFavoritesById(long userId, long movieId) {

@@ -14,14 +14,17 @@ public class FavoriteDaoCollectionImplTest {
     }
 
     public static void testAddFavoritesById() {
-        System.out.println("Product added into Favorite");
+        System.out.println("Movies added into Favorite");
         favoriteDao.addFavoritesById(1, 3);
-        favoriteDao.addFavoritesById(1, 2);
+        favoriteDao.addFavoritesById(1, 4);
     }
 
     public static void testGetAllFavorites() {
         try {
-            System.out.println("Retrieving all the items from favorite");
+
+            System.out.println("Retrieving all the Movies from favorite");
+            System.out.printf("%-10s%-24s%-16s%-11s%-21s%-15s%s\n", "Id ", "Title", "Box Office",
+                    "Active", "Date of Launch", "Genre", "Has Teaser");
             List<Movie> list = favoriteDao.getAllFavorites(1).getFavoriteList();
             for (Movie movie : list) {
                 System.out.println(movie);
@@ -36,6 +39,6 @@ public class FavoriteDaoCollectionImplTest {
 
     public static void testRemoveFavorites() {
         System.out.println("Remove Favorite: ");
-        favoriteDao.removeFavoritesById(1, 2);
+        favoriteDao.removeFavoritesById(1, 4);
     }
 }
