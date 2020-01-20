@@ -7,7 +7,7 @@ public class Favorite {
     private int noOfFavorite;
 
     public Favorite() {
-        // TODO Auto-generated constructor stub
+
     }
 
     public List<Movie> getFavoriteList() {
